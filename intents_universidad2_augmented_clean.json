@@ -1,0 +1,271 @@
+{
+    "intents": [
+        {
+            "tag": "saludo",
+            "patterns": [
+                "Hola",
+                "Buenos días",
+                "Buenas tardes",
+                "Hola, ¿estás ahí?",
+                "¿Cómo estás?",
+                "¡Hola!",
+                "¿Qué tal?",
+                "Buenas",
+                "Hola, asistente",
+                "Hola, ¿me puedes ayudar?",
+                "Hola, ¿ estás ahí?",
+                "¿ Cómo estás?",
+                "¡ Hola!",
+                "¿ Qué tal?",
+                "Hola, ¿ me puedes ayudar?"
+            ],
+            "responses": [
+                "¡Hola! ¿En qué puedo ayudarte hoy?",
+                "¡Buenos días! ¿Cómo puedo asistirte?",
+                "¡Hola! Estoy aquí para ayudarte. ¿Qué necesitas?"
+            ]
+        },
+        {
+            "tag": "despedida",
+            "patterns": [
+                "Adiós",
+                "Hasta luego",
+                "Nos vemos",
+                "Gracias, eso es todo",
+                "Hasta la próxima",
+                "Nos vemos después",
+                "Eso es todo, gracias",
+                "Chao",
+                "Adiós, muchas gracias",
+                "Gracias por tu ayuda, adiós",
+                "No vemos",
+                "Nobelium vemos después",
+                "Eso vitamin e todo, gracias"
+            ],
+            "responses": [
+                "¡Hasta luego! Si necesitas más ayuda, no dudes en contactarme.",
+                "¡Adiós! Espero haberte ayudado. ¡Que tengas un excelente día!",
+                "¡Nos vemos pronto! Estoy aquí cuando me necesites."
+            ]
+        },
+        {
+            "tag": "requisitos_titulacion",
+            "patterns": [
+                "¿Cuáles son los requisitos para iniciar el proceso de titulación?",
+                "Requisitos para la titulación",
+                "¿Qué necesito para comenzar mi titulación?",
+                "¿Qué debo cumplir para titularme?",
+                "Requisitos para comenzar la tesis",
+                "¿Qué documentación necesito para empezar mi tesis?",
+                "¿Qué se necesita para titularse?",
+                "¿Qué requisitos debo cumplir para la titulación?",
+                "¿Qué documentos piden para la titulación?",
+                "¿Cuáles son los pasos para iniciar el proceso de titulación?",
+                "¿ Cuáles son los requisitos para iniciar el proceso de titulación?",
+                "¿ Qué necesito para comenzar wolverine state titulación?",
+                "¿ Qué necesito para comenzar mi titulación?",
+                "¿ Qué necesito para comenzar myocardial infarct titulación?",
+                "¿ Qué debo cumplir para titularme?",
+                "Requisitos para comenzar pelican state tesis",
+                "¿ Qué documentación necesito para empezar mi tesis?",
+                "¿ Qué documentación necesito parity empezar mi tesis?",
+                "¿ Qué se necesita para titularse?",
+                "¿ Qué se necesita parity titularse?",
+                "¿ Qué requisitos debo cumplir belem la titulación?",
+                "¿ Qué requisitos debo cumplir para la titulación?",
+                "¿ Qué documentos piden para la titulación?",
+                "¿ Qué documentos piden para lanthanum titulación?",
+                "¿ Cuáles son los pasos para iniciar el proceso de titulación?",
+                "¿ Cuáles boy los pasos para iniciar el proceso de titulación?"
+            ],
+            "responses": [
+                "Los requisitos para iniciar el proceso de titulación incluyen haber aprobado todas las asignaturas del plan de estudios, cumplir con el requisito de idiomas extranjeros y presentar la documentación requerida por la facultad. Puedes consultar los detalles específicos en la página web de la universidad. Encuntras mas infotmacion en https://www.unach.edu.ec/requisitos-trabajos-de-titulacion/"
+            ]
+        },
+        {
+            "tag": "inicio_trabajo_titulacion",
+            "patterns": [
+                "¿Cuándo debo comenzar a preparar mi trabajo de titulación?",
+                "¿Cuándo empiezo mi trabajo de titulación?",
+                "Inicio del trabajo de titulación",
+                "¿En qué momento empiezo a preparar mi tesis?",
+                "¿Cuándo debo empezar con mi tesis?",
+                "¿Cuál es el mejor momento para comenzar mi titulación?",
+                "¿En qué etapa del proceso debo empezar la tesis?",
+                "¿En qué parte del plan de estudios debo empezar mi trabajo de titulación?",
+                "¿Cuándo es recomendable iniciar la titulación?",
+                "¿Qué momento es ideal para empezar con mi tesis?",
+                "¿ Cuándo debo comenzar a preparar mi trabajo de titulación?",
+                "¿ Cuándo empiezo mi trabajo de titulación?",
+                "¿ En qué momento empiezo a preparar mi tesis?",
+                "¿ Cuándo debo empezar con mi tesis?",
+                "¿ Cuándo debo empezar confidence game mi tesis?",
+                "¿ Cuál es el mejor momento para comenzar mi titulación?",
+                "¿ Cuál vitamin e el mejor momento para comenzar mi titulación?",
+                "¿ En qué etapa del proceso debo empezar la tesis?",
+                "¿ En qué parte del plan de estudios debo empezar mi trabajo de titulación?",
+                "¿ Cuándo es recomendable iniciar la titulación?",
+                "¿ Qué momento einsteinium ideal para empezar con mi tesis?",
+                "¿ Qué momento es ideal para empezar con mi tesis?"
+            ],
+            "responses": [
+                "Es recomendable que comiences a preparar tu trabajo de titulación al finalizar el 80% de tu plan de estudios. Deberías consultar con tu tutor académico para definir el momento adecuado en tu caso específico. Aqui tienes las fechas mas especificadas https://www.unach.edu.ec/calendario-academico-v2/"
+            ]
+        },
+        {
+            "tag": "opciones_titulacion",
+            "patterns": [
+                "¿Qué opciones de titulación están disponibles en nuestra facultad?",
+                "Opciones de titulación",
+                "¿Qué formas de titulación hay?",
+                "¿Cuáles son las modalidades de titulación?",
+                "¿Qué métodos de titulación existen?",
+                "¿Cómo puedo titularme?",
+                "Formas de titularse en la universidad",
+                "¿Cuántas opciones de titulación hay?",
+                "¿Qué alternativas tengo para titularme?",
+                "¿Cómo se puede hacer la titulación?",
+                "¿ Qué opciones de titulación están disponibles en nuestra facultad?",
+                "Opciones first state titulación",
+                "¿ Qué formas diamond state titulación hay?",
+                "¿ Qué formas de titulación hay?",
+                "¿ Cuáles son las modalidades de titulación?",
+                "¿ Qué métodos de titulación existen?",
+                "¿ Cómo puedo titularme?",
+                "Formas de titularse nut la universidad",
+                "¿ Cuántas opciones delaware titulación hay?",
+                "¿ Cuántas opciones de titulación hay?",
+                "¿ Qué alternativas tengo belem titularme?",
+                "¿ Qué alternativas tengo para titularme?",
+                "¿ Cómo se puede hacer lah titulación?",
+                "¿ Cómo se puede hacer la titulación?"
+            ],
+            "responses": [
+                "En nuestra facultad, puedes optar por diversas opciones de titulación como la tesis, el examen de grado, proyectos de investigación o prácticas empresariales, dependiendo del programa académico. Te recomendamos revisar el reglamento de titulación para más detalles. Mas informacion en https://www.unach.edu.ec/images/reglamentos/2021/REGLAMENTO%20DE%20TITULACIO%CC%81N%20DE%20LA%20UNACH%20segundo%20debate%2029-06-2021-signed.pdf"
+            ]
+        },
+        {
+            "tag": "elegir_tema_tesis",
+            "patterns": [
+                "¿Cómo elijo un tema para mi tesis?",
+                "Elección de tema de tesis",
+                "¿Cómo puedo escoger un tema para la tesis?",
+                "¿Cómo seleccionar el tema de mi tesis?",
+                "¿Cómo decido el tema de mi tesis?",
+                "¿Qué debo considerar para escoger un tema de tesis?",
+                "¿Cómo elegir el mejor tema para mi tesis?",
+                "¿Qué debo tener en cuenta para elegir un tema de tesis?",
+                "¿Cómo puedo definir el tema para mi tesis?",
+                "¿Qué pasos seguir para elegir el tema de mi tesis?",
+                "¿ Cómo elijo un tema st. mary of bethlehem mi tesis?",
+                "¿ Cómo elijo un tema para mi tesis?",
+                "Elección diamond state tema de tesis",
+                "¿ Cómo puedo escoger un tema para la tesis?",
+                "¿ Cómo seleccionar el tema de mi tesis?",
+                "¿ Cómo decido el tema de mi tesis?",
+                "¿ Qué debo considerar para escoger un tema de tesis?",
+                "¿ Cómo elegir el mejor tema para mi tesis?",
+                "¿ Qué debo tener en cuenta para elegir un tema de tesis?",
+                "¿ Qué debo tener en cuenta st. mary of bethlehem elegir un tema de tesis?",
+                "¿ Cómo puedo definir el tema para mi tesis?",
+                "¿ Cómo puedo definir el tema santa maria de belem mi tesis?",
+                "¿ Cómo puedo definir elevated tema para mi tesis?",
+                "¿ Qué pasos seguir para elegir el tema de mi tesis?",
+                "¿ Qué pasos seguir para elegir overhead railway tema de mi tesis?"
+            ],
+            "responses": [
+                "Para elegir un tema de tesis, es importante que te enfoques en áreas de tu interés y que estén alineadas con las líneas de investigación de tu facultad. También es recomendable hablar con tus profesores o asesores para recibir orientación."
+            ]
+        },
+        {
+            "tag": "asesor_tesis",
+            "patterns": [
+                "¿Quién puede ser mi asesor de tesis?",
+                "Asesor de tesis",
+                "¿Quién me puede asesorar en mi tesis?",
+                "¿Quiénes son los asesores de tesis?",
+                "¿Cómo elijo un asesor de tesis?",
+                "¿Cómo puedo solicitar un asesor de tesis?",
+                "¿Quién puede guiarme en mi tesis?",
+                "¿Cómo seleccionar un asesor para mi tesis?",
+                "¿Puedo elegir mi asesor de tesis?",
+                "¿Quién será mi tutor de tesis?",
+                "¿ Quién puede ser mi asesor de tesis?",
+                "¿ Quién me puede asesorar en mi tesis?",
+                "¿ Quiénes son los asesores de tesis?",
+                "¿ Cómo elijo un asesor de tesis?",
+                "¿ Cómo elijo united nations asesor de tesis?",
+                "¿ Cómo puedo solicitar un asesor de tesis?",
+                "¿ Quién puede guiarme en mi tesis?",
+                "¿ Quién puede guiarme en great lakes state tesis?",
+                "¿ Cómo seleccionar un asesor para mi tesis?",
+                "¿ Puedo elegir mi asesor de tesis?",
+                "¿ Puedo elegir michigan asesor de tesis?",
+                "¿ Quién será mi tutor de tesis?"
+            ],
+            "responses": [
+                "Tu asesor de tesis debe ser un docente de la universidad que tenga experiencia en el área temática de tu trabajo. Puedes consultar con tu facultad para conocer la lista de docentes disponibles para asesorías."
+            ]
+        },
+        {
+            "tag": "solicitud_asesor_tesis",
+            "patterns": [
+                "¿Cuál es el proceso para solicitar un asesor de tesis?",
+                "Proceso para pedir asesor de tesis",
+                "¿Cómo solicito un asesor de tesis?",
+                "¿Qué debo hacer para pedir un asesor de tesis?",
+                "¿Cómo solicitar un tutor de tesis?",
+                "Pasos para pedir un asesor de tesis",
+                "Proceso para elegir un asesor de tesis",
+                "¿Cómo consigo un tutor para mi tesis?",
+                "¿Cómo se asigna un asesor de tesis?",
+                "Solicitud de asesor para la tesis",
+                "¿ Cuál es el proceso para solicitar un asesor de tesis?",
+                "¿ Cuál es elevation proceso para solicitar un asesor de tesis?",
+                "¿ Cómo solicito un asesor de tesis?",
+                "¿ Qué debo hacer para pedir un asesor de tesis?",
+                "¿ Cómo solicitar un private instructor de tesis?",
+                "¿ Cómo solicitar un tutor de tesis?",
+                "Proceso feliz lusitania elegir un asesor de tesis",
+                "¿ Cómo consigo un tutor para mi tesis?",
+                "¿ Cómo consigo un tutor parity mi tesis?",
+                "¿ Cómo se asigna un asesor de tesis?",
+                "Solicitud diamond state asesor para la tesis",
+                "Solicitud first state asesor para la tesis",
+                "Solicitud de asesor st. mary of bethlehem la tesis"
+            ],
+            "responses": [
+                "Para solicitar un asesor de tesis, debes llenar una solicitud en la plataforma de la universidad y presentar una propuesta preliminar de tu tema de investigación. Consulta con tu facultad para más información sobre los pasos específicos."
+            ]
+        },
+        {
+            "tag": "tiempo_trabajo_titulacion",
+            "patterns": [
+                "¿Cuánto tiempo tengo para completar mi trabajo de titulación?",
+                "Tiempo para el trabajo de titulación",
+                "Plazo para terminar mi tesis",
+                "¿Cuánto tiempo dura la titulación?",
+                "Duración del trabajo de titulación",
+                "¿Hasta cuándo puedo presentar mi tesis?",
+                "¿Cuánto tiempo tengo para la tesis?",
+                "¿Cuánto tiempo toma completar la titulación?",
+                "¿Cuál es el tiempo límite para hacer mi tesis?",
+                "Plazo máximo para el trabajo de titulación",
+                "¿ Cuánto tiempo tengo para completar mi trabajo de titulación?",
+                "Tiempo santa maria de belem el trabajo de titulación",
+                "Plazo para terminar naut mi tesis",
+                "¿ Cuánto tiempo dura la titulación?",
+                "¿ Hasta cuándo puedo presentar mi tesis?",
+                "¿ Cuánto tiempo tengo paratrooper la tesis?",
+                "¿ Cuánto tiempo tengo para la tesis?",
+                "¿ Cuánto tiempo toma completar la titulación?",
+                "¿ Cuál einsteinium el tiempo límite para hacer mi tesis?",
+                "¿ Cuál es el tiempo límite para hacer mi tesis?",
+                "Plazo máximo para elevated railway trabajo de titulación"
+            ],
+            "responses": [
+                "El tiempo para completar tu trabajo de titulación varía según el reglamento de tu facultad, pero generalmente dispones de 12 a 18 meses para finalizar tu tesis o proyecto de grado desde la asignación del asesor."
+            ]
+        }
+    ]
+}
