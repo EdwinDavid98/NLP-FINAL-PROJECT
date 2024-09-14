@@ -1,95 +1,567 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNACH Chatbot</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Similar a la fuente divertida */
-            background-color: #eef2f6;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3em;
-            color: #1a73e8;
-            margin-top: 50px;
-        }
-
-        p {
-            font-size: 1.5em;
-            color: #333;
-        }
-
-        /* Botón de GitHub */
-        .github-btn {
-            display: inline-block;
-            background-color: #1a73e8;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            margin: 30px;
-            transition: background-color 0.3s;
-        }
-
-        .github-btn:hover {
-            background-color: #0d47a1;
-        }
-
-        /* Caja de descarga */
-        .download-box {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            padding: 20px;
-            margin: 20px;
-        }
-
-        .download-btn {
-            display: block;
-            background-color: #1a73e8;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1em;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .download-btn:hover {
-            background-color: #0d47a1;
-        }
-
-        footer {
-            margin-top: 40px;
-            color: #999;
-        }
-    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UNACH Chatbot - Proyecto</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <style>
+            /* Estilos generales */
+            body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #e9eef5;
+                line-height: 1.6;
+                color: #333;
+            }
+    
+            /* Banner */
+            .banner {
+                background: linear-gradient(to right, #1a73e8, #4caf50);
+                color: white;
+                padding: 80px 0;
+                text-align: center;
+            }
+    
+            .banner h1 {
+                font-size: 3.5em;
+                margin: 0;
+                letter-spacing: 2px;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            }
+    
+            .banner p {
+                font-size: 1.5em;
+                margin-top: 10px;
+            }
+    
+            /* Contenedor general */
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                margin: 30px auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            }
+    
+            h2 {
+                font-size: 2em;
+                margin-bottom: 15px;
+                color: #1a73e8;
+            }
+    
+            p {
+                font-size: 1.1em;
+                color: #555;
+                margin-bottom: 20px;
+            }
+    
+            ul {
+                list-style-type: disc;
+                margin-left: 20px;
+            }
+    
+            li {
+                margin-bottom: 10px;
+            }
+    
+            pre {
+                background-color: #2d2d2d;
+                color: #f8f8f2;
+                padding: 15px;
+                border-radius: 5px;
+                text-align: left;
+                margin: 20px auto;
+                max-width: 90%;
+                overflow: auto;
+            }
+    
+            code {
+                font-family: "Courier New", Courier, monospace;
+                font-size: 0.9em;
+            }
+    
+            /* Sección de resultados centrada */
+            .results-section {
+                margin: 40px 0;
+            }
+    
+            .results-section h3 {
+                font-size: 1.5em;
+                color: #333;
+            }
+    
+            .results-section img {
+                max-width: 800px;
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            }
+    
+            /* Estilos del footer */
+            footer {
+                text-align: center;
+                padding: 20px;
+                background-color: #333;
+                color: white;
+                margin-top: 40px;
+            }
+    
+            /* Botones */
+            .btn {
+                display: inline-block;
+                background-color: #4caf50;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 1.1em;
+            }
+    
+            .btn:hover {
+                background-color: #45a049;
+            }
+    
+        </style>
 </head>
+
 <body>
 
-    <!-- Título principal -->
-    <h1>UNACH Chatbot</h1>
-    <p>El proyecto de chatbot más innovador de la UNACH.</p>
-
-    <!-- Botón de GitHub -->
-    <a href="https://github.com/tu_usuario/unach-chatbot" target="_blank" class="github-btn">Ver proyecto en GitHub</a>
-
-    <!-- Caja de descarga con botones -->
-    <div class="download-box">
-        <h2>Descargas:</h2>
-        <a href="https://github.com/tu_usuario/unach-chatbot/archive/refs/heads/main.zip" class="download-btn">Descargar archivo zip</a>
-        <a href="https://github.com/tu_usuario/unach-chatbot/archive/refs/heads/main.tar.gz" class="download-btn">Descargar archivo tar.gz</a>
+    <!-- Banner superior -->
+    <div class="banner">
+        <h1>UNACH Chatbot</h1>
+        <p>Proyecto de Inteligencia Artificial - NLP</p>
     </div>
 
+    <!-- Contenedor del contenido principal -->
+    <div class="container">
+        <!-- Objetivo del proyecto -->
+        <h2>Objetivo del Proyecto</h2>
+        <p>
+            El objetivo principal de este proyecto es desarrollar un chatbot inteligente para la Universidad Nacional de Chimborazo 
+            (UNACH), que utilice procesamiento de lenguaje natural (NLP) para asistir a estudiantes y personal administrativo. 
+            El chatbot está diseñado para responder preguntas sobre procesos de titulación, requisitos, fechas importantes y otros temas relevantes.
+        </p>
+
+        <!-- Pasos realizados -->
+        <h2>Pasos Realizados</h2>
+        <ul>
+            <li>Análisis del problema y definición de los requisitos del chatbot.</li>
+            <li>Recopilación de datos: Preguntas frecuentes de estudiantes y administrativos.</li>
+            <li>Entrenamiento de un modelo basado en RoBERTa para la clasificación de intenciones.</li>
+            <li>Desarrollo de la interfaz del chatbot utilizando la biblioteca Streamlit.</li>
+            <li>Implementación de un modelo de clasificación de secuencias para predecir las intenciones de los usuarios.</li>
+        </ul>
+
+        <!-- Conocimientos previos -->
+        <h2>Conocimientos Previos Utilizados</h2>
+        <p>
+            Para llevar a cabo este proyecto, se requirió el dominio de las siguientes áreas:
+        </p>
+        <ul>
+            <li><strong>Procesamiento de Lenguaje Natural (NLP)</strong>: Uso de modelos como RoBERTa y técnicas de preprocesamiento de texto.</li>
+            <li><strong>Machine Learning y Deep Learning</strong>: Entrenamiento de modelos de clasificación y ajuste de hiperparámetros.</li>
+            <li><strong>Python y Bibliotecas de IA</strong>: Uso de bibliotecas como PyTorch, PyTorch Lightning y Hugging Face Transformers.</li>
+            <li><strong>Streamlit</strong>: Desarrollo de una interfaz interactiva para el chatbot.</li>
+        </ul>
+
+        <!-- Aumento de Datos con NLP Augmentation -->
+        <h2>Aumento de Datos con NLP Augmentation</h2>
+        <p>
+            Para mejorar la calidad y robustez del modelo, se utilizó la técnica de <strong>Aumento de Datos</strong>. Esta técnica nos permitió generar más ejemplos de patrones de texto mediante la sustitución de palabras por sinónimos, lo que ayuda a que el modelo generalice mejor. Utilizamos la biblioteca <strong>nlpaug</strong> con un <em>augmentador de sinónimos</em>, lo que permitió agregar múltiples variantes para cada patrón original.
+        </p>
+        <p>
+            El objetivo es ampliar el conjunto de datos sin perder coherencia en las frases generadas. Además, aplicamos un filtro para asegurarnos de que las nuevas frases sean coherentes y no repetitivas.
+        </p>
+
+        <!-- Código de Aumento de Datos -->
+        <h2>Código de Aumento de Datos</h2>
+        <pre>
+<code>
+import json 
+import nlpaug.augmenter.word as naw
+
+# Cargar el dataset JSON original
+with open('/home/emontenegrob/Labs_NLP/prueba2_chatbot/intents_universidad2.json', 'r') as file:
+    data = json.load(file)
+
+# Inicializar el augmentador de sinónimos con una probabilidad menor y más restricciones
+aug = naw.SynonymAug(aug_src='wordnet', aug_min=1, aug_max=1, aug_p=0.1)
+
+# Definir cuántos ejemplos adicionales quieres generar por cada patrón original
+num_augmented_examples = 3
+
+def es_coherente(texto):
+    """Función simple para evitar palabras incorrectas o incoherentes"""
+    palabras_incoherentes = ["pine tree state", "atomic", "mile", "number"]
+    return all(palabra not in texto.lower() for palabra in palabras_incoherentes)
+
+# Aumentar los patrones de entrada controlando la coherencia
+for intent in data['intents']:
+    original_patterns = intent['patterns'][:]
+    for pattern in original_patterns:
+        for _ in range(num_augmented_examples):
+            augmented_pattern = aug.augment(pattern)
+            if isinstance(augmented_pattern, list):
+                augmented_pattern = augmented_pattern[0]
+            if es_coherente(augmented_pattern) and augmented_pattern != pattern:
+                intent['patterns'].append(augmented_pattern)
+
+# Guardar el dataset aumentado
+with open('/home/emontenegrob/Labs_NLP/prueba2_chatbot/intents_universidad2_augmented_clean.json', 'w') as file:
+    json.dump(data, file, indent=4, ensure_ascii=False)
+
+print("Dataset aumentado y filtrado guardado en 'intents_universidad2_augmented.json'.")
+</code>
+        </pre>
+
+        <!-- Descripción del modelo -->
+        <h2>Modelo Utilizado: RoBERTa</h2>
+        <p>
+            En este proyecto, se utiliza el modelo <strong>RoBERTa</strong> (Robustly optimized BERT approach), una variante optimizada de BERT, que mejora el rendimiento al eliminar algunas limitaciones del modelo original. Este modelo es ideal para tareas de clasificación de texto y fue entrenado para clasificar intenciones en el chatbot.
+        </p>
+
+        <!-- Arquitectura de RoBERTa -->
+        <h2>Arquitectura de RoBERTa</h2>
+        <p>
+            RoBERTa es una arquitectura de red neuronal basada en transformadores, que es capaz de comprender el contexto en una secuencia de texto. Utiliza un proceso de preentrenamiento similar a BERT, basado en el modelo de enmascaramiento de palabras. RoBERTa ha sido optimizado para mejorar el rendimiento en tareas de procesamiento de lenguaje natural al utilizar:
+        </p>
+        <ul>
+            <li>Más datos de entrenamiento.</li>
+            <li>Mayor tamaño de mini-batch y secuencias más largas.</li>
+            <li>Eliminación de la predicción de la siguiente oración para mejorar la comprensión contextual.</li>
+        </ul>
+
+        <!-- Hiperparámetros usados -->
+        <h2>Hiperparámetros Utilizados</h2>
+        <ul>
+            <li><strong>Tasa de aprendizaje (learning rate)</strong>: 5e-5</li>
+            <li><strong>Optimización</strong>: Usamos el optimizador AdamW, con decaimiento de peso (`weight_decay`) de 0.01.</li>
+            <li><strong>Programación de la tasa de aprendizaje</strong>: Cosine Annealing con un T_max de 10.</li>
+            <li><strong>Early Stopping</strong>: Implementado con paciencia de 3 épocas sin mejora en la validación.</li>
+            <li><strong>Batch Size</strong>: 32</li>
+        </ul>
+
+        <!-- Código del modelo -->
+        <h2>Código del Modelo: train_model.py</h2>
+        <pre>
+<code>
+import json
+import torch
+import pytorch_lightning as pl
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from transformers import RobertaTokenizer, RobertaForSequenceClassification, AdamW
+from torch.utils.data import DataLoader, TensorDataset
+from torch.optim.lr_scheduler import CosineAnnealingLR
+from pytorch_lightning.callbacks import EarlyStopping, ModelCheckpoint
+
+# Definir el path donde están los archivos guardados
+path = '/home/emontenegrob/Labs_NLP/prueba2_chatbot/'
+
+class RobertaClassifier(pl.LightningModule):
+    def __init__(self, num_labels, learning_rate=5e-5, weight_decay=0.01):
+        super(RobertaClassifier, self).__init__()
+        self.save_hyperparameters()
+        self.model = RobertaForSequenceClassification.from_pretrained(
+            'roberta-base', num_labels=num_labels, hidden_dropout_prob=0.4)
+        self.learning_rate = learning_rate
+        self.weight_decay = weight_decay
+
+    def forward(self, input_ids, attention_mask, labels=None):
+        return self.model(input_ids, attention_mask=attention_mask, labels=labels)
+
+    def training_step(self, batch, batch_idx):
+        input_ids, attention_mask, labels = batch
+        outputs = self(input_ids, attention_mask, labels)
+        loss = outputs.loss
+        self.log('train_loss', loss)
+        return loss
+
+    def validation_step(self, batch, batch_idx):
+        input_ids, attention_mask, labels = batch
+        outputs = self(input_ids, attention_mask, labels)
+        val_loss = outputs.loss
+        preds = torch.argmax(outputs.logits, dim=-1)
+        acc = (preds == labels).float().mean()
+        self.log('val_loss', val_loss, prog_bar=True)
+        self.log('val_acc', acc, prog_bar=True)
+        return val_loss
+
+    def configure_optimizers(self):
+        optimizer = AdamW(self.parameters(), lr=self.learning_rate, weight_decay=self.weight_decay)
+        scheduler = CosineAnnealingLR(optimizer, T_max=10)
+        return [optimizer], [scheduler]
+
+# Entrenamiento
+trainer = pl.Trainer(max_epochs=30, accelerator='gpu', devices=1)
+trainer.fit(model)
+</code>
+        </pre>
+
+         <!-- Objetivo del proyecto -->
+         <h2>Resultados del Entrenamiento del Modelo</h2>
+         <p>
+             Los resultados obtenidos después de entrenar el modelo de clasificación basado en RoBERTa muestran un desempeño excelente en el conjunto de validación. A continuación, se detallan los principales resultados:
+         </p>
+ 
+         <ul>
+             <li><strong>Precisión de validación (val_acc)</strong>: <strong>94.9%</strong> de precisión en las predicciones del modelo sobre el conjunto de validación.</li>
+             <li><strong>Pérdida de validación (val_loss)</strong>: La pérdida de validación fue de <strong>0.201</strong>, lo que indica que el modelo tiene un buen ajuste con un bajo error en las predicciones.</li>
+         </ul>
+ 
+         <p>
+             Estos resultados sugieren que el modelo ha aprendido bien las características de los datos y es capaz de generalizar correctamente. 
+         </p>
+ 
+         <!-- Imagen de los resultados -->
+         <div class="results-image">
+             <h3>Captura de los resultados</h3>
+             <img src="C:\Users\dowin\OneDrive - Universidad San Francisco de Quito\MESTRIA INTELIGENCIA ARTIFICIAL\MODULO 8 NLP\NLP-FINAL-PROJECT\imagenes\train.png" alt="Resultados del entrenamiento">
+         </div>
+        <!-- Descripción del modelo de interacción -->
+        <h2>Interacción con el Modelo</h2>
+        <p>
+            Para interactuar con el modelo preentrenado de RoBERTa, se utiliza una interfaz de consola simple que permite a los usuarios
+            escribir preguntas y obtener respuestas inmediatas del chatbot. El modelo predice la intención de la pregunta del usuario y selecciona
+            una respuesta basada en las respuestas definidas para esa intención.
+        </p>
+
+        <!-- Predicción de la intención -->
+        <h2>Predicción de la Intención</h2>
+        <p>
+            El proceso de predicción comienza con la tokenización de la entrada del usuario. Esta entrada es transformada en tokens utilizando el
+            tokenizador de RoBERTa, y luego se pasa al modelo preentrenado. El modelo genera logits, y el logit más alto se convierte en la clase (o intención) predicha.
+        </p>
+
+        <ul>
+            <li>La entrada del usuario se convierte en tokens utilizando el tokenizador preentrenado de RoBERTa.</li>
+            <li>El modelo predice la clase con la mayor probabilidad utilizando <strong>torch.argmax()</strong>.</li>
+            <li>Se mapea la clase predicha a una etiqueta de intención predefinida.</li>
+        </ul>
+
+        <!-- Selección de Respuestas -->
+        <h2>Selección de Respuestas</h2>
+        <p>
+            Una vez que se ha predicho la intención del usuario, el chatbot selecciona una respuesta adecuada de la lista de respuestas predefinidas.
+            Para hacer la interacción más dinámica y natural, se selecciona una respuesta aleatoria utilizando la función <strong>random.choice()</strong>.
+        </p>
+
+        <!-- Código del archivo model_lightning.py -->
+        <h2>Código del Archivo: model_lightning.py</h2>
+        <pre>
+<code>
+import torch
+from transformers import RobertaTokenizer, RobertaForSequenceClassification
+import json
+import random
+
+# Definir el path donde están los archivos guardados
+path = '/home/emontenegrob/Labs_NLP/prueba2_chatbot/roberta_complete_model/'
+
+# Cargar el tokenizador y el modelo guardado
+tokenizer = RobertaTokenizer.from_pretrained(path)
+model = RobertaForSequenceClassification.from_pretrained(path)
+
+# Mover el modelo a la GPU si está disponible
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+model.to(device)
+model.eval()  # Establecer el modo de evaluación
+
+# Cargar las etiquetas del dataset original (las intenciones)
+with open('/home/emontenegrob/Labs_NLP/prueba2_chatbot/intents_universidad2.json', 'r') as file:
+    data = json.load(file)
+
+# Obtener el mapeo de etiquetas (intenciones)
+labels = [intent['tag'] for intent in data['intents']]
+
+# Función para predecir la intención del usuario
+def predict_intent(text):
+    inputs = tokenizer(text, padding=True, truncation=True, return_tensors="pt", max_length=64)
+    inputs = {key: value.to(device) for key, value in inputs.items()}
+    
+    with torch.no_grad():
+        outputs = model(**inputs)
+        logits = outputs.logits
+        predicted_class_id = torch.argmax(logits, dim=-1).item()
+    
+    predicted_label = labels[predicted_class_id]
+    return predicted_label
+
+# Función para obtener una respuesta basada en la intención
+def get_response(intent):
+    for i in data['intents']:
+        if i['tag'] == intent:
+            return random.choice(i['responses'])
+
+# Interfaz para interactuar con el modelo
+if __name__ == "__main__":
+    print("Chatbot está listo para recibir preguntas. Escribe 'salir' para terminar.")
+
+    while True:
+        user_input = input("Escribe tu pregunta: ")
+        if user_input.lower() == "salir":
+            print("¡Hasta luego!")
+            break
+
+        intent = predict_intent(user_input)
+        print(f"Intento predicho: {intent}")
+        response = get_response(intent)
+        print(f"Respuesta del bot: {response}")
+</code> 
+        </pre>
+        <!-- Interfaz con Streamlit -->
+        <h2>Interfaz Gráfica con Streamlit</h2>
+        <p>
+            Se utilizó <strong>Streamlit</strong> para construir una interfaz gráfica interactiva que permite a los usuarios interactuar con el chatbot de forma sencilla. 
+            Streamlit proporciona una forma rápida de crear aplicaciones web directamente en Python sin necesidad de conocimientos en desarrollo web.
+        </p>
+
+        <ul>
+            <li>La aplicación está diseñada como un chat, donde el usuario puede escribir preguntas en un campo de texto.</li>
+            <li>La conversación se muestra en tiempo real con una simulación de escritura del bot para hacer la interacción más natural.</li>
+            <li>El historial de chat se mantiene hasta que el usuario decida reiniciar la conversación.</li>
+        </ul>
+
+        <!-- Código de la interfaz con Streamlit -->
+        <h2>Código del Archivo: app_lightning.py</h2>
+        <pre>
+<code>
+import streamlit as st
+import time
+from model_lightning import predict_intent, get_response
+
+# Configuración de la página
+st.set_page_config(page_title="UNACH BOT", page_icon="📲", layout="centered")
+
+# Estilo personalizado con tema oscuro
+st.markdown("""
+    <style>
+    .stApp {
+        background-color: #1E1E1E;
+        color: #FFFFFF;
+    }
+    .stTextInput > div > div > input {
+        background-color: #2E2E2E;
+        color: #FFFFFF;
+    }
+    .stButton > button {
+        background-color: #4CAF50;
+        color: #FFFFFF;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+# Título y descripción
+st.title('📲 UNACH BOT Asistente Virtual')
+st.markdown("Bienvenido al asistente virtual de la Universidad Nacional de Chimborazo. ¿En qué puedo ayudarte hoy?")
+
+# Inicializar la lista de mensajes si no existe
+if "messages" not in st.session_state:
+    st.session_state.messages = [
+        {"role": "assistant", "content": "Hola, soy el asistente virtual de la UNACH. ¿En qué puedo ayudarte?"}
+    ]
+
+# Función para añadir mensajes
+def add_message(role, content):
+    st.session_state.messages.append({"role": role, "content": content})
+
+# Mostrar los mensajes
+for message in st.session_state.messages[-50:]:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+# Entrada del usuario
+user_input = st.chat_input("Escribe tu pregunta aquí...")
+
+# Procesar la entrada del usuario
+if user_input:
+    add_message("user", user_input)
+
+    # Mostrar "Escribiendo..." del chatbot
+    with st.chat_message("assistant"):
+        st.markdown("Escribiendo...")
+        time.sleep(1.5)
+
+    # Predecir la intención del mensaje del usuario y obtener la respuesta
+    intent_prediction = predict_intent(user_input)
+    response = get_response(intent_prediction)
+
+    # Añadir la respuesta del asistente
+    add_message("assistant", response)
+    st.rerun()
+
+# Opción para borrar el historial de chat
+if st.button("Borrar historial de chat"):
+    st.session_state.messages = [
+        {"role": "assistant", "content": "Hola, soy el asistente virtual de la UNACH. ¿En qué puedo ayudarte?"}
+    ]
+    st.rerun()
+
+# Pie de página
+st.markdown("---")
+st.markdown("Desarrollado por Edwin Montenegro UNACH")
+</code>
+        </pre>
+    </div>
+    <div class="results-section">
+        <h2>Resultados del Proyecto</h2>
+        <p>En esta sección se muestran algunos ejemplos de cómo el chatbot ha sido capaz de interactuar con los usuarios. A continuación se presentan imágenes de diferentes escenarios donde el asistente ha respondido preguntas relacionadas con el proceso de titulación.</p>
+        
+        <!-- Ejemplo 1 -->
+        <h3>Ejemplo 1: Pregunta sobre formas de titulación</h3>
+        <div style="text-align:center;">
+        <img src="C:\Users\dowin\OneDrive - Universidad San Francisco de Quito\MESTRIA INTELIGENCIA ARTIFICIAL\MODULO 8 NLP\NLP-FINAL-PROJECT\imagenes\ejemplo1.png" alt="Ejemplo 1: Pregunta sobre formas de titulación" style="width:100%; max-width:800px;">
+        </div>
+        <p>En este ejemplo, el usuario pregunta sobre las formas de titulación disponibles. El chatbot responde con información relevante acerca de las diversas opciones disponibles en la universidad.</p>
+    
+        <!-- Ejemplo 2 -->
+        <h3>Ejemplo 2: Pregunta sobre cómo elegir un tema de tesis</h3>
+        <div style="text-align:center;">
+        <img src="C:\Users\dowin\OneDrive - Universidad San Francisco de Quito\MESTRIA INTELIGENCIA ARTIFICIAL\MODULO 8 NLP\NLP-FINAL-PROJECT\imagenes\ejemplo4.png" alt="Ejemplo 2: Pregunta sobre cómo elegir un tema de tesis" style="width:100%; max-width:800px;">
+        </div>
+        <p>El usuario solicita información sobre cómo seleccionar el tema de su tesis. El asistente virtual responde proporcionando los pasos necesarios para la elección del tema, asegurando que el estudiante reciba la guía necesaria.</p>
+    
+        <!-- Ejemplo 3 -->
+        <h3>Ejemplo 3: Solicitud de asesor para tesis</h3>
+        <div style="text-align:center;">
+        <img src="C:\Users\dowin\OneDrive - Universidad San Francisco de Quito\MESTRIA INTELIGENCIA ARTIFICIAL\MODULO 8 NLP\NLP-FINAL-PROJECT\imagenes\ejemplo3.png" alt="Ejemplo 3: Solicitud de asesor para tesis" style="width:100%; max-width:800px;">
+        </div>
+        <p>En este caso, el asistente ayuda al usuario proporcionándole información sobre el proceso para solicitar un asesor de tesis en la universidad, guiándolo en los pasos que debe seguir para completar este procedimiento.</p>
+    
+        <!-- Ejemplo 4 -->
+        <h3>Ejemplo 4: Tiempo para completar el trabajo de titulación</h3>
+        <div style="text-align:center;">
+        <img src="C:\Users\dowin\OneDrive - Universidad San Francisco de Quito\MESTRIA INTELIGENCIA ARTIFICIAL\MODULO 8 NLP\NLP-FINAL-PROJECT\imagenes\ejemplo5.png" alt="Ejemplo 4: Tiempo para completar el trabajo de titulación" style="width:100%; max-width:800px;">
+        </div>
+        <p>El chatbot responde a la pregunta del usuario sobre cuánto tiempo tiene para completar su trabajo de titulación, ofreciendo una explicación detallada sobre los plazos establecidos por la facultad.</p>
+    
+        <!-- Ejemplo 5 -->
+        <h3>Ejemplo 5: Despedida del Chatbot</h3>
+        <div style="text-align:center;">
+        <img src="C:\Users\dowin\OneDrive - Universidad San Francisco de Quito\MESTRIA INTELIGENCIA ARTIFICIAL\MODULO 8 NLP\NLP-FINAL-PROJECT\imagenes\despedida.png" alt="Ejemplo 5: Despedida del Chatbot" style="width:100%; max-width:800px;">
+        </div>
+        <p>Finalmente, el usuario agradece al asistente virtual por su ayuda, y el chatbot responde con un mensaje de despedida, indicando que siempre estará disponible para ofrecer asistencia en el futuro.</p>
+    </div>
+    
+    <!-- Conclusiones -->
+    <div class="conclusions-section">
+        <h2>Conclusiones Finales</h2>
+        <p>
+            El proyecto de chatbot de la UNACH ha sido un éxito al demostrar su capacidad para interactuar con los estudiantes y brindarles información útil y precisa sobre el proceso de titulación. Utilizando técnicas avanzadas de procesamiento de lenguaje natural (NLP) y el modelo RoBERTa, el asistente virtual puede identificar las intenciones del usuario y proporcionar respuestas relevantes.
+        </p>
+        <p>
+            Las imágenes anteriores muestran el buen desempeño del chatbot al responder preguntas relacionadas con los diferentes aspectos de la titulación. Además, el sistema ha sido entrenado utilizando técnicas de aumento de datos para mejorar su capacidad de generalización, permitiendo que el chatbot responda a una variedad de consultas de los estudiantes.
+        </p>
+        <p>
+            En resumen, este chatbot representa un avance significativo en la automatización del soporte a los estudiantes, y su implementación en la plataforma educativa permitirá mejorar la experiencia del usuario, facilitando el acceso a la información y reduciendo la carga de trabajo del personal administrativo.
+        </p>
+    </div>
+    <!-- Pie de página -->
     <footer>
         Desarrollado por el equipo de TI de la UNACH | © 2024
     </footer>
