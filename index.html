@@ -7,94 +7,92 @@
     <style>
         /* Estilos generales */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #282c34;
-            color: #61dafb;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Similar a la fuente divertida */
+            background-color: #eef2f6;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
             text-align: center;
         }
 
         h1 {
             font-size: 3em;
-            color: #ffcc00;
-            margin-bottom: 20px;
-            animation: slideIn 1s ease-out;
+            color: #1a73e8;
+            margin-top: 50px;
         }
 
         p {
-            font-size: 1.2em;
-            color: #ffffff;
-            margin-bottom: 40px;
+            font-size: 1.5em;
+            color: #333;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            font-size: 1.1em;
-            color: #61dafb;
-            margin: 10px 0;
-        }
-
-        /* Botón */
-        .btn {
+        /* Botón de GitHub */
+        .github-btn {
+            display: inline-block;
+            background-color: #1a73e8;
+            color: #fff;
             padding: 15px 30px;
-            background-color: #61dafb;
-            border: none;
-            color: #282c34;
+            text-decoration: none;
             font-size: 1.2em;
             border-radius: 5px;
-            text-decoration: none;
+            margin: 30px;
             transition: background-color 0.3s;
         }
 
-        .btn:hover {
-            background-color: #ffcc00;
+        .github-btn:hover {
+            background-color: #0d47a1;
         }
 
-        /* Animación */
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        /* Caja de descarga */
+        .download-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .download-btn {
+            display: block;
+            background-color: #1a73e8;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #0d47a1;
         }
 
         footer {
-            margin-top: 30px;
-            font-size: 0.9em;
+            margin-top: 40px;
             color: #999;
         }
-
     </style>
 </head>
 <body>
-    <h1>Bienvenido al UNACH Chatbot</h1>
-    <p>Este es un proyecto creado para la Universidad Nacional de Chimborazo utilizando Python, Streamlit y NLP.</p>
-    
-    <h2>Archivos principales del proyecto:</h2>
-    <ul>
-        <li>🏋️‍♂️ <strong>train_model_lightning.py</strong> - Entrenamiento del modelo</li>
-        <li>🧠 <strong>model_lightning.py</strong> - Cargar el modelo entrenado</li>
-        <li>💻 <strong>app_lightning.py</strong> - Interfaz web con Streamlit</li>
-    </ul>
 
-    <a class="btn" href="https://github.com/tu_usuario/unach-chatbot" target="_blank">Ver en GitHub</a>
+    <!-- Título principal -->
+    <h1>UNACH Chatbot</h1>
+    <p>El proyecto de chatbot más innovador de la UNACH.</p>
+
+    <!-- Botón de GitHub -->
+    <a href="https://github.com/tu_usuario/unach-chatbot" target="_blank" class="github-btn">Ver proyecto en GitHub</a>
+
+    <!-- Caja de descarga con botones -->
+    <div class="download-box">
+        <h2>Descargas:</h2>
+        <a href="https://github.com/tu_usuario/unach-chatbot/archive/refs/heads/main.zip" class="download-btn">Descargar archivo zip</a>
+        <a href="https://github.com/tu_usuario/unach-chatbot/archive/refs/heads/main.tar.gz" class="download-btn">Descargar archivo tar.gz</a>
+    </div>
 
     <footer>
         Desarrollado por el equipo de TI de la UNACH | © 2024
     </footer>
+
 </body>
 </html>
